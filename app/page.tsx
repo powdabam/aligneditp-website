@@ -112,7 +112,7 @@ export default function Home() {
               fontWeight: 700,
             }}
           >
-            Call (702) 605-00000
+            Call (702) 605-0000
           </a>
 
           <a
