@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 export default function Home() {
   return (
     <main
@@ -249,6 +252,148 @@ export default function Home() {
         </div>
       </section>
 
+{/* INTERACTIVE SERVICES */}
+<section
+  style={{
+    background: "#0b0f0c",
+    color: "#ffffff",
+    padding: "90px 6%",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+    }}
+  >
+    <p
+      style={{
+        color: "#e21d2b",
+        fontWeight: "bold",
+        letterSpacing: "3px",
+        fontSize: "13px",
+        marginBottom: "14px",
+      }}
+    >
+      BUILT AROUND YOUR BUSINESS
+    </p>
+
+    <h2
+      style={{
+        fontSize: "clamp(34px, 5vw, 58px)",
+        lineHeight: 1.05,
+        margin: "0 0 18px",
+      }}
+    >
+      What kind of IT partner
+      <br />
+      does your business need?
+    </h2>
+
+    <p
+      style={{
+        color: "#b8c0ba",
+        fontSize: "18px",
+        lineHeight: 1.7,
+        maxWidth: "700px",
+        marginBottom: "45px",
+      }}
+    >
+      Explore the technology services Aligned IT Partners can bring together
+      around your organization.
+    </p>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: "14px",
+      }}
+    >
+      {[
+        {
+          number: "01",
+          title: "Managed IT",
+          description:
+            "Help desk • Proactive monitoring • Microsoft 365 • Networks • Backup • On-site support",
+        },
+        {
+          number: "02",
+          title: "Cybersecurity",
+          description:
+            "Endpoint protection • MFA • Email security • Security monitoring • Risk assessments",
+        },
+        {
+          number: "03",
+          title: "Compliance",
+          description:
+            "HIPAA • PCI DSS • NIST • Security policies • Audit readiness",
+        },
+        {
+          number: "04",
+          title: "IT Strategy",
+          description:
+            "Technology planning • Cloud • Infrastructure • Projects • vCIO guidance",
+        },
+      ].map((service) => (
+        <div
+          key={service.title}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#c5202f";
+            e.currentTarget.style.transform = "translateY(-8px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "#131a15";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+          style={{
+            background: "#131a15",
+            border: "1px solid #283129",
+            padding: "32px",
+            minHeight: "260px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            cursor: "pointer",
+            transition: "all 0.25s ease",
+          }}
+        >
+          <span
+            style={{
+              color: "#8d9890",
+              fontSize: "13px",
+              letterSpacing: "2px",
+            }}
+          >
+            {service.number}
+          </span>
+
+          <div>
+            <h3
+              style={{
+                fontSize: "27px",
+                margin: "0 0 16px",
+              }}
+            >
+              {service.title}
+            </h3>
+
+            <p
+              style={{
+                color: "#d5d9d6",
+                lineHeight: 1.65,
+                margin: 0,
+              }}
+            >
+              {service.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+      
       {/* COMPLIANCE */}
       <section
         style={{
