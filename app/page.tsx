@@ -487,6 +487,125 @@ export default function Home() {
   </div>
 </section>
 
+      {/* CYBERSECURITY */}
+<section
+  id="cybersecurity"
+  style={{
+    background: "#0b0f0c",
+    color: "#ffffff",
+    padding: "90px 6%",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+    }}
+  >
+    <div
+      style={{
+        color: "#e21d2b",
+        fontWeight: 700,
+        letterSpacing: "3px",
+        fontSize: "13px",
+        marginBottom: "14px",
+      }}
+    >
+      CYBERSECURITY
+    </div>
+
+    <h2
+      style={{
+        fontSize: "clamp(34px, 5vw, 56px)",
+        lineHeight: 1.08,
+        margin: "0 0 20px",
+        maxWidth: "850px",
+      }}
+    >
+      Protect your business, your data, and your people.
+    </h2>
+
+    <p
+      style={{
+        color: "#d5d9d6",
+        fontSize: "18px",
+        lineHeight: 1.7,
+        maxWidth: "760px",
+        margin: "0 0 42px",
+      }}
+    >
+      Aligned IT Partners helps organizations reduce technology risk with
+      practical cybersecurity solutions designed to protect users, systems,
+      sensitive data, and business operations.
+    </p>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+        gap: "18px",
+      }}
+    >
+      {[
+        [
+          "Threat Protection",
+          "Security controls designed to help prevent, detect, and respond to threats across your technology environment.",
+        ],
+        [
+          "Identity and Access",
+          "Protect accounts and sensitive resources with stronger authentication, access controls, and security practices.",
+        ],
+        [
+          "Data Protection",
+          "Safeguard important business information with secure systems, backups, and strategies designed around your risk.",
+        ],
+        [
+          "Security Monitoring",
+          "Improve visibility into suspicious activity and security events so potential issues can be identified and addressed.",
+        ],
+      ].map(([title, description]) => (
+        <div
+          key={title}
+          style={{
+            border: "1px solid #29332d",
+            padding: "28px",
+            background: "#111713",
+            borderRadius: "6px",
+            transition: "all 0.25s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.borderColor = "#c5202f";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.borderColor = "#29332d";
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "22px",
+              margin: "0 0 14px",
+            }}
+          >
+            {title}
+          </h3>
+
+          <p
+            style={{
+              color: "#c7ceca",
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            {description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 {/* INDUSTRIES */}
 <section
   id="industries"
@@ -625,8 +744,9 @@ export default function Home() {
 
       
       {/* COMPLIANCE */}
-      <section
-        style={{
+     <section
+  id="compliance"
+  style={{
           background: "#f3f5f3",
           padding: "75px 7%",
           textAlign: "center",
@@ -650,7 +770,7 @@ export default function Home() {
             margin: "0 0 20px",
           }}
         >
-          Technology built with compliance in mind.
+Security and compliance built into your technology.
         </h2>
 
         <p
@@ -662,9 +782,10 @@ export default function Home() {
             margin: "0 auto 38px",
           }}
         >
-          We help businesses develop technology environments that support
-          security, accountability, and regulatory requirements.
-        </p>
+  Aligned IT Partners helps organizations strengthen cybersecurity, protect
+  sensitive data, and align their technology with applicable security and
+  compliance requirements.
+</p>
 
         <div
           style={{
@@ -674,7 +795,7 @@ export default function Home() {
             gap: "12px",
           }}
         >
-          {["HIPAA", "FERPA", "CMMC", "GLBA"].map((item) => (
+{["HIPAA", "FERPA", "CMMC", "GLBA", "PCI DSS", "NIST"].map((item) => (
             <div
               key={item}
               style={{
