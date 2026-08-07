@@ -486,6 +486,143 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+{/* INDUSTRIES */}
+<section
+  id="industries"
+  style={{
+    background: "#ffffff",
+    padding: "90px 6%",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+    }}
+  >
+    <div
+      style={{
+        maxWidth: "760px",
+        marginBottom: "48px",
+      }}
+    >
+      <div
+        style={{
+          color: "#c5202f",
+          fontWeight: 700,
+          letterSpacing: "3px",
+          fontSize: "13px",
+          marginBottom: "14px",
+        }}
+      >
+        INDUSTRIES
+      </div>
+
+      <h2
+        style={{
+          color: "#172218",
+          fontSize: "clamp(32px, 5vw, 50px)",
+          lineHeight: 1.1,
+          margin: "0 0 20px",
+        }}
+      >
+        Technology built around your industry.
+      </h2>
+
+      <p
+        style={{
+          color: "#4e5750",
+          fontSize: "18px",
+          lineHeight: 1.75,
+          margin: 0,
+        }}
+      >
+        Every organization has different technology, security, and compliance
+        requirements. Aligned IT Partners designs solutions around the way your
+        organization operates.
+      </p>
+    </div>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gap: "18px",
+      }}
+    >
+      {[
+        [
+          "Healthcare",
+          "Secure technology environments designed around patient care, privacy, and regulatory requirements.",
+        ],
+        [
+          "Legal",
+          "Reliable systems that help protect sensitive client information and keep your team productive.",
+        ],
+        [
+          "Financial Services",
+          "Technology and security designed for organizations where trust, availability, and data protection matter.",
+        ],
+        [
+          "Professional Services",
+          "Scalable technology that supports your people, clients, and day to day operations.",
+        ],
+        [
+          "Construction",
+          "Connected systems that support teams in the office, in the field, and across multiple locations.",
+        ],
+        [
+          "Growing Businesses",
+          "Technology strategy and infrastructure designed to support expansion without creating unnecessary complexity.",
+        ],
+      ].map(([title, description]) => (
+        <div
+          key={title}
+          style={{
+            border: "1px solid #e5e8e6",
+            padding: "30px",
+            background: "#ffffff",
+            borderRadius: "6px",
+            transition: "all 0.25s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-6px)";
+            e.currentTarget.style.borderColor = "#c5202f";
+            e.currentTarget.style.boxShadow = "0 12px 28px rgba(0,0,0,0.08)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.borderColor = "#e5e8e6";
+            e.currentTarget.style.boxShadow = "none";
+          }}
+        >
+          <h3
+            style={{
+              color: "#172218",
+              fontSize: "22px",
+              margin: "0 0 14px",
+            }}
+          >
+            {title}
+          </h3>
+
+          <p
+            style={{
+              color: "#5d655f",
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            {description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       
       {/* COMPLIANCE */}
       <section
