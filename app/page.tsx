@@ -189,7 +189,7 @@ export default function Home() {
     }}
   >
     {[
-      ["LAS VEGAS BASED", "Local expertise. Business-first support."],
+      ["BUSINESS-FIRST IT", "Technology built around how your organization operates."],
       ["SECURITY FOCUSED", "Cybersecurity built into every solution."],
       ["COMPLIANCE READY", "HIPAA • PCI DSS • NIST"],
       ["STRATEGIC IT", "Technology aligned with business goals."],
