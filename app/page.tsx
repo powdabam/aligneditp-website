@@ -31,7 +31,43 @@ export default function Home() {
             height: "auto",
           }}
         />
-
+<nav
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "30px",
+    marginLeft: "auto",
+    marginRight: "30px",
+  }}
+>
+  {[
+    ["Services", "#services"],
+    ["Industries", "#industries"],
+    ["Cybersecurity", "#cybersecurity"],
+    ["Compliance", "#compliance"],
+    ["About", "#about"],
+    ["Contact", "#contact"],
+  ].map(([label, href]) => (
+    <a
+      key={label}
+      href={href}
+      style={{
+        color: "#172218",
+        textDecoration: "none",
+        fontSize: "14px",
+        fontWeight: 600,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.color = "#c5202f";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.color = "#172218";
+      }}
+    >
+      {label}
+    </a>
+  ))}
+</nav>
         <a
           href="tel:7026050000"
           style={{
