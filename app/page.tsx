@@ -169,7 +169,64 @@ export default function Home() {
           </a>
         </div>
       </section>
+{/* TRUST / CREDIBILITY STRIP */}
+<section
+  style={{
+    background: "#ffffff",
+    borderBottom: "1px solid #e8e8e8",
+    padding: "28px 6%",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: "24px",
+      flexWrap: "wrap",
+    }}
+  >
+    {[
+      ["LAS VEGAS BASED", "Local expertise. Business-first support."],
+      ["SECURITY FOCUSED", "Cybersecurity built into every solution."],
+      ["COMPLIANCE READY", "HIPAA • PCI DSS • NIST"],
+      ["STRATEGIC IT", "Technology aligned with business goals."],
+    ].map(([title, description]) => (
+      <div
+        key={title}
+        style={{
+          flex: "1 1 220px",
+          textAlign: "center",
+          padding: "8px 16px",
+        }}
+      >
+        <div
+          style={{
+            color: "#c5202f",
+            fontSize: "13px",
+            fontWeight: 800,
+            letterSpacing: "1.5px",
+            marginBottom: "7px",
+          }}
+        >
+          {title}
+        </div>
 
+        <div
+          style={{
+            color: "#4d5650",
+            fontSize: "14px",
+            lineHeight: 1.5,
+          }}
+        >
+          {description}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
       {/* INTRO */}
       <section
         style={{
