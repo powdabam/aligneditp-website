@@ -12,77 +12,112 @@ export default function Home() {
       }}
     >
       {/* HEADER */}
-      <header
+   {/* HEADER */}
+<header
+style={{
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "18px",
+  padding: "16px 3%",
+  borderBottom: "1px solid #e8e8e8",
+  background: "#ffffff",
+  flexWrap: "wrap",
+}}
+>
+  <a
+    href="#top"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      textDecoration: "none",
+    }}
+  >
+    <img
+      src="/Aligned Logo.png"
+      alt="Aligned IT Partners"
+      style={{
+       width: "155px",
+        height: "auto",
+        display: "block",
+      }}
+    />
+  </a>
+
+  <nav
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap",
+    }}
+  >
+    {[
+      ["Services", "#services"],
+      ["Cybersecurity", "#cybersecurity"],
+      ["Compliance", "#compliance"],
+      ["About", "#about"],
+    ].map(([label, href]) => (
+      <a
+        key={label}
+        href={href}
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "18px 6%",
-          borderBottom: "1px solid #e8e8e8",
-          background: "#ffffff",
+          color: "#172218",
+          textDecoration: "none",
+          fontSize: "14px",
+          fontWeight: 600,
+          transition: "color 0.2s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.color = "#c5202f";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.color = "#172218";
         }}
       >
-        <img
-          src="/Aligned%20Logo.png"
-          alt="Aligned IT Partners"
-          style={{
-            width: "230px",
-            maxWidth: "45%",
-            height: "auto",
-          }}
-        />
-<nav
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "30px",
-    marginLeft: "auto",
-    marginRight: "30px",
-  }}
->
-  {[
-    ["Services", "#services"],
-    ["Industries", "#industries"],
-    ["Cybersecurity", "#cybersecurity"],
-    ["Compliance", "#compliance"],
-    ["About", "#about"],
-    ["Contact", "#contact"],
-  ].map(([label, href]) => (
+        {label}
+      </a>
+    ))}
+  </nav>
+
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "12px",
+      flexWrap: "wrap",
+    }}
+  >
     <a
-      key={label}
-      href={href}
+      href="mailto:help@aligneditp.com"
       style={{
         color: "#172218",
         textDecoration: "none",
         fontSize: "14px",
         fontWeight: 600,
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.color = "#c5202f";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.color = "#172218";
+    >
+      Email Us
+    </a>
+
+    <a
+      href="tel:7026050000"
+      style={{
+        background: "#c5202f",
+        color: "#ffffff",
+        textDecoration: "none",
+        padding: "12px 20px",
+        borderRadius: "6px",
+        fontWeight: 700,
+        fontSize: "14px",
+        whiteSpace: "nowrap",
       }}
     >
-      {label}
+      Get IT Support
     </a>
-  ))}
-</nav>
-        <a
-          href="tel:7026050000"
-          style={{
-            background: "#c51f2a",
-            color: "#ffffff",
-            textDecoration: "none",
-            padding: "13px 22px",
-            borderRadius: "6px",
-            fontWeight: 700,
-            fontSize: "15px",
-          }}
-        >
-          (702) 605-0000
-        </a>
-      </header>
+  </div>
+</header>
 
       {/* HERO */}
       <section
