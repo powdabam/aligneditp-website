@@ -488,7 +488,7 @@ style={{
         >
           <span
             style={{
-              color: "#8d9890",
+              color: "#ffffff",
               fontSize: "13px",
               letterSpacing: "2px",
             }}
