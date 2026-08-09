@@ -313,7 +313,69 @@ style={{
           </p>
         </div>
 
-       
+    {/* SERVICES */}
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px",
+  }}
+>
+  {[
+    [
+      "Managed IT",
+      "Proactive technology management, support, and strategic guidance for your organization.",
+    ],
+    [
+      "Cybersecurity",
+      "Security solutions designed to protect your systems, users, data, and business operations.",
+    ],
+    [
+      "Compliance",
+      "Technology and security practices aligned with regulatory and industry requirements.",
+    ],
+    [
+      "Cloud & Infrastructure",
+      "Reliable cloud, network, endpoint, and infrastructure solutions built for your business.",
+    ],
+  ].map(([title, description]) => (
+    <div
+      key={title}
+      style={{
+        padding: "30px",
+        border: "1px solid #e4e7e4",
+        borderRadius: "8px",
+        background: "#ffffff",
+      }}
+    >
+      <div
+        style={{
+          width: "38px",
+          height: "4px",
+          background: "#c51f2a",
+          marginBottom: "22px",
+        }}
+      />
+      <h3
+        style={{
+          fontSize: "22px",
+          margin: "0 0 14px",
+        }}
+      >
+        {title}
+      </h3>
+      <p
+        style={{
+          color: "#5d655f",
+          lineHeight: 1.65,
+          margin: 0,
+        }}
+      >
+        {description}
+      </p>
+    </div>
+  ))}
+</div>   
 
 {/* INTERACTIVE SERVICES */}
 <section
