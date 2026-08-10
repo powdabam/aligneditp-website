@@ -376,7 +376,7 @@ style={{
     </div>
   ))}
 </div>   
-
+</section>
 {/* INTERACTIVE SERVICES */}
 <section
   style={{
