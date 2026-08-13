@@ -14,24 +14,25 @@ export default function Story() {
         style={{
           maxWidth: "1300px",
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "420px 1fr",
-          gap: "70px",
-          alignItems: "center",
+display: "grid",
+gridTemplateColumns: "480px minmax(0,1fr)",
+gap: "90px",
+alignItems: "start",
         }}
       >
         <div>
-          <Image
-            src="/family.jpg"
-            alt="Wyson Family"
-            width={420}
-            height={520}
-            style={{
-              width: "100%",
-              borderRadius: "16px",
-              objectFit: "cover",
-            }}
-          />
+ <Image
+    src="/family.jpg"
+    alt="Wyson Family"
+    width={520}
+    height={420}
+style={{
+    width: "100%",
+    height: "auto",
+    borderRadius: "18px",
+    boxShadow: "0 25px 60px rgba(0,0,0,.15)",
+    }}
+/>
         </div>
 
         <div>
